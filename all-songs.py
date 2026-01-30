@@ -3,7 +3,7 @@ import openpyxl
 import argparse
 # import json
 
-# DISCOGS_TOKEN = 'vXnawMMZRDsrrLtiejKsRVKCsqxDbkpWOLfctKRu'
+# DISCOGS_TOKEN = ''
 COLUMN_HEADERS=['Album ID', 'Album', 'Year', 'Artists', 'Track Number', 'Track', 'Track Artists', 'Styles', 'Format', 'Notes']
 
 
@@ -50,10 +50,10 @@ def main():
         count += 1
         if loop >= 20:
             loop = 0
-            print('Still going... [{} tracks so far]'.format(count))
-            wb.save(args.filename)
-            print('Done! [{}]'.format(count))
-            return
+            # print('Still going... [{} tracks so far]'.format(count))
+            # wb.save(args.filename)
+            # print('Done! [{}]'.format(count))
+            # return
         try:
             note = release.notes[2]['value']
         except Exception as ex:
